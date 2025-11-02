@@ -25,7 +25,7 @@ def load_model(path):
 # Load the 4 best models
 # -------------------------------------------------
 models = {
-    'Stacking Ensemble ⭐ (Best)': load_model('stacking_ensemble_pipeline.joblib'),
+    'Stacking Ensemble': load_model('stacking_ensemble_pipeline.joblib'),
     'XGBoost': load_model('xgboost_pipeline.joblib'),
     'CatBoost': load_model('catboost_pipeline.joblib'),
     'Random Forest': load_model('random_forest_pipeline.joblib')
@@ -193,3 +193,4 @@ if st.button('Predict Addiction Level', use_container_width=True, type="primary"
     except Exception as e:
         st.error(f"An error occurred during prediction: {e}")
         print(f"[ERROR] Prediction error: {e}")  # Terminal log
+
